@@ -1,9 +1,9 @@
 {
-  "name": "genjwt",
+  "name": "jwt-gen-cli",
   "version": "1.0.0",
   "main": "dist/index.js",
   "bin": {
-    "genjwt": "dist/index.js"
+    "jwt-gen-cli": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

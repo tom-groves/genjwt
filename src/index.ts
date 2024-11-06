@@ -6,7 +6,7 @@ import * as jwt from "jsonwebtoken";
 const program = new Command();
 
 program
-  .name("genjwt")
+  .name("jwt-gen-cli")
   .description("CLI tool to generate JSON Web Tokens (JWT)")
   .version("1.0.0");
 

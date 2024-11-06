@@ -1,8 +1,8 @@
 # JWT CLI Tool
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/npm/v/genjwt.svg)
-![Build](https://github.com/tom-groves/genjwt/workflows/Publish%20to%20npm/badge.svg)
+![Version](https://img.shields.io/npm/v/jwt-gen-cli.svg)
+![Build](https://github.com/tom-groves/jwt-gen-cli/workflows/Publish%20to%20npm/badge.svg)
 
 ## Table of Contents
 
@@ -42,13 +42,13 @@
 You can install the JWT CLI tool globally using npm:
 
 ```bash
-npm install -g genjwt
+npm install -g jwt-gen-cli
 ```
 
 Alternatively, you can use it via `npx` without installing globally:
 
 ```bash
-npx genjwt --help
+npx jwt-gen-cli --help
 ```
 
 ## Usage
@@ -60,13 +60,13 @@ The CLI provides a straightforward interface to generate JWTs with various optio
 Generate a JWT with a secret and a simple payload:
 
 ```bash
-genjwt --secret your-very-secret-key --payload '{"userId":123}' --expiresIn 2h
+jwt-gen-cli --secret your-very-secret-key --payload '{"userId":123}' --expiresIn 2h
 ```
 
 **Short Flags:**
 
 ```bash
-genjwt -s your-very-secret-key -p '{"userId":123}' -e 2h
+jwt-gen-cli -s your-very-secret-key -p '{"userId":123}' -e 2h
 ```
 
 ### Using a Payload File
@@ -85,13 +85,13 @@ Instead of passing the payload directly, you can provide a JSON file containing 
 2. **Generate the JWT using the payload file:**
 
    ```bash
-   genjwt --secret your-very-secret-key --payload-file ./payload.json --expiresIn 2h
+   jwt-gen-cli --secret your-very-secret-key --payload-file ./payload.json --expiresIn 2h
    ```
 
 **Short Flags:**
 
 ```bash
-genjwt -s your-very-secret-key -f ./payload.json -e 2h
+jwt-gen-cli -s your-very-secret-key -f ./payload.json -e 2h
 ```
 
 ### Adding Additional Claims
@@ -99,13 +99,13 @@ genjwt -s your-very-secret-key -f ./payload.json -e 2h
 You can include extra claims by using the `--claims` option.
 
 ```bash
-genjwt --secret your-very-secret-key --payload '{"userId":123}' --claims '{"isVerified":true}' --expiresIn 2h
+jwt-gen-cli --secret your-very-secret-key --payload '{"userId":123}' --claims '{"isVerified":true}' --expiresIn 2h
 ```
 
 **Short Flags:**
 
 ```bash
-genjwt -s your-very-secret-key -p '{"userId":123}' -c '{"isVerified":true}' -e 2h
+jwt-gen-cli -s your-very-secret-key -p '{"userId":123}' -c '{"isVerified":true}' -e 2h
 ```
 
 ### Specifying Issuer and Subject
@@ -113,13 +113,13 @@ genjwt -s your-very-secret-key -p '{"userId":123}' -c '{"isVerified":true}' -e 2
 Define the issuer (`iss`) and subject (`sub`) claims in the token.
 
 ```bash
-genjwt --secret your-very-secret-key --payload '{"userId":123}' --issuer "your-app" --subject "authentication" --expiresIn 2h
+jwt-gen-cli --secret your-very-secret-key --payload '{"userId":123}' --issuer "your-app" --subject "authentication" --expiresIn 2h
 ```
 
 **Short Flags:**
 
 ```bash
-genjwt -s your-very-secret-key -p '{"userId":123}' -i "your-app" -s "authentication" -e 2h
+jwt-gen-cli -s your-very-secret-key -p '{"userId":123}' -i "your-app" -s "authentication" -e 2h
 ```
 
 ### Complete Example
@@ -127,7 +127,7 @@ genjwt -s your-very-secret-key -p '{"userId":123}' -i "your-app" -s "authenticat
 Generate a JWT with a comprehensive set of options:
 
 ```bash
-genjwt \
+jwt-gen-cli \
   --secret mysecretkey \
   --payload '{"userId":123, "name":"John Doe"}' \
   --expiresIn "24h" \
@@ -154,8 +154,8 @@ If you wish to contribute or customize the JWT CLI tool, follow the development 
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/tom-groves/genjwt.git
-   cd genjwt
+   git clone https://github.com/tom-groves/jwt-gen-cli.git
+   cd jwt-gen-cli
    ```
 
 2. **Install Dependencies:**
@@ -251,8 +251,8 @@ Contributions are welcome! Whether it's reporting issues, suggesting features, o
 2. **Clone Your Fork:**
 
    ```bash
-   git clone https://github.com/tom-groves/genjwt.git
-   cd genjwt
+   git clone https://github.com/tom-groves/jwt-gen-cli.git
+   cd jwt-gen-cli
    ```
 
 3. **Create a New Branch:**
@@ -293,7 +293,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Support
 
-If you encounter any issues or have questions, feel free to [open an issue](https://github.com/tom-groves/genjwt/issues) on the repository.
+If you encounter any issues or have questions, feel free to [open an issue](https://github.com/tom-groves/jwt-gen-cli/issues) on the repository.
 
 ## Acknowledgements
 
